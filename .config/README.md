@@ -2,5 +2,5 @@
 
 requirements
 ```
-apk add ripgrep make
+apk add ripgrep make lazygit
 ```

@@ -14,10 +14,10 @@ yes | pkg update \
 yes | pkg install proot-distro git
 ```
 <details>
-<summary>Termux phantom killer{}</summary>
+<summary>Termux phantom killer</summary>
 In android phantom process killer kill the termux which lead to server and background process to step
-Guide to solve problem
-<details/>
+(Guide)[https://youtu.be/vK1Jx9ydi5c] to solve problem
+</details>
 
 ## Termux Style
 * Remove default Keyboard
@@ -121,7 +121,7 @@ apk add neovim
 ```
 Use dotfile provided nvim config or use
 * [NvChad](https://nvchad.com) lightweight and fast
-* [LazyVim]() Full IDE Setup
+* [LazyVim](https://www.lazyvim.org) Full IDE Setup
 
 ## Change default shell
 Set zsh as default shell
