@@ -67,7 +67,6 @@ And package upgrade
 ```
 apk add neovim sudo git nodejs npm clang \
 apk upgrade && apk update
-
 ```
 One Block Copy/Paste
 ```
