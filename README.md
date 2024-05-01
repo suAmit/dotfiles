@@ -14,9 +14,11 @@ yes | pkg update \
 yes | pkg install proot-distro git
 ```
 <details>
+ 
 <summary>Termux phantom killer</summary>
 In android phantom process killer kill the termux which lead to server and background process to step
 [Guide](https://youtu.be/vK1Jx9ydi5c) to solve problem
+
 </details>
 
 ## Termux Style
@@ -29,7 +31,9 @@ git clone https://github.com/PapersFromTree/TermuxSetup ~/.termux
 ```
 
 <details>
+ 
 <summary>View proot-distro files from termux home dir</summary>
+
 Creates a symlink of installed rootfs on your home dir and make it easily accessable
 ```
 ln -rs $PREFIX/var/lib/proot-distro/installed-rootfs $HOME/proot-distro-rootfs
