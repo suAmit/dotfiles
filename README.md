@@ -17,7 +17,7 @@ yes | pkg install proot-distro git
  
 <summary>Termux phantom killer</summary>
 In android phantom process killer kill the termux which lead to server and background process to step
-[blog](https://www.atlassian.com/git/tutorials/dotfiles)  to solve problem
+[Guide](https://youtu.be/vK1Jx9ydi5c)  to solve problem
 
 </details>
 
