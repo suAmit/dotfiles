@@ -1,2 +1,2 @@
 require("core")
-require("modules.lazy")
+require("plugins.lazy")
