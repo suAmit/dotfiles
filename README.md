@@ -9,9 +9,7 @@ This dotfiles have created use bare git repository following [blog](https://www.
   * `git`
 
 ```
-yes | pkg upgrade \
-yes | pkg update \
-yes | pkg install proot-distro git
+yes | pkg upgrade ; yes | pkg update ; yes | pkg install proot-distro git ; termux-setup-storage
 ```
 <details>
  
@@ -26,8 +24,7 @@ In android phantom process killer kill the termux which lead to server and backg
 * Add font
 * Add color scheme
 ```
-rm -rf ~/.termux \
-git clone https://github.com/PapersFromTree/TermuxSetup ~/.termux
+rm -rf ~/.termux ; git clone https://github.com/PapersFromTree/TermuxSetup ~/.termux
 ```
 
 <details>
@@ -65,15 +62,11 @@ Install packages
   * `clang`
 And package upgrade
 ```
-apk add neovim sudo git nodejs npm clang \
-apk upgrade && apk update
+apk add neovim sudo git nodejs npm clang ; apk upgrade && apk update
 ```
 One Block Copy/Paste
 ```
-proot-distro install alpine \
-proot-distro login alpine -- bash -c 'apk upgrade && apk update \
-    apk add neovim sudo github-cli git nodejs npm clang \
-    apk upgrade && apk update'
+proot-distro install alpine ; proot-distro login alpine -- bash -c 'apk upgrade && apk update ; apk add neovim sudo github-cli git nodejs npm clang ; apk upgrade && apk update'
 ```
 
 ### Add user
