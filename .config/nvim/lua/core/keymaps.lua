@@ -4,19 +4,11 @@ vim.g.mapleader = " "
 local keymap = vim.keymap
 ----------------------- General Keymaps -------------------------
 
--- use jk to exit insert mode
 keymap.set("i", "jk", "<ESC>", { desc = "Exit insert mode" })
 
 -- lines Move Up and Down selected lines
 keymap.set("v", "K", ":m '<-2<CR>gv=gv", { desc = "Selected lines move Up" })
 keymap.set("v", "J", ":m '>+1<CR>gv=gv", { desc = "Selected line move Down" })
-
--- Move in splits
-keymap.set("v", "<C-j>", "<C-w>j", { desc = "Go to below split" })
-keymap.set("v", "<C-k>", "<C-w>k", { desc = "Go to above split" })
-keymap.set("v", "<C-l>", "<C-w>l", { desc = "Go to left split" })
-keymap.set("v", "<C-h>", "<C-w>h", { desc = "Go to right split" })
-keymap.set("v", "<C-/>", "<C-w>p", { desc = "Go to previou split" })
 
 -- buffer
 keymap.set("n", "<leader>n", ":bnext<cr>", { desc = "Next buffer" })

@@ -1,6 +1,6 @@
 return {
   "echasnovski/mini.surround",
-  keys = { "gz" },
+  event = "InsertEnter",
   opts = {
     mappings = {
       add = "gza", -- Add surrounding in Normal and Visual modes

@@ -1,7 +1,60 @@
+local git_status_items = function()
+  local edit_file = function(modifier, file)
+    vim.cmd("e " .. file)
+  end
+
+  local status = vim.fn.systemlist("git status -s")
+
+  items = {}
+  limit = 15
+  for _, line in ipairs(status) do
+    if limit == 0 then
+      break
+    end
+
+    local modifier = ""
+    local file = ""
+    local parts = vim.split(line, " ")
+
+    if #parts == 2 then
+      modifier = parts[1]
+      file = parts[2]
+    elseif #parts == 3 then
+      modifier = parts[2]
+      file = parts[3]
+    end
+
+    -- no need to display deleted file for opening.
+    if modifier == "D" then
+      goto continue
+    end
+
+    table.insert(items, {
+      {
+        section = "Git Status (limit 15)",
+        name = line,
+        action = function()
+          edit_file(modifier, file)
+        end,
+      },
+    })
+
+    limit = limit - 1
+    ::continue::
+  end
+
+  return items
+end
+
 return {
   "echasnovski/mini.starter",
   config = function()
     local starter = require("mini.starter")
+
+    local new_section = function(name, action, section)
+      return { name = name, action = action, section = section }
+    end
+
     starter.setup({
       content_hooks = {
         starter.gen_hook.adding_bullet("░ ", true),
@@ -16,8 +69,20 @@ return {
       }, "\n"),
       query_updaters = [[abcdefghilmoqrstuvwxyz0123456789_-,.ABCDEFGHIJKLMOQRSTUVWXYZ]],
       items = {
+        function()
+          if require("auto-session").session_exists_for_cwd() then
+            return { section = "Sessions", name = "Restore last session", action = [[SessionRestore]] }
+          end
+        end,
+        function()
+          if require("auto-session").session_exists_for_cwd() then
+            return { section = "Sessions", name = "Delete last session", action = [[SessionDelete]] }
+          end
+        end,
+
         starter.sections.recent_files(4, false),
         starter.sections.recent_files(4, true),
+        git_status_items(),
         starter.sections.builtin_actions(),
       },
     })
