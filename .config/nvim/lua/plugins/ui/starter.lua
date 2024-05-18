@@ -6,7 +6,7 @@ local git_status_items = function()
   local status = vim.fn.systemlist("git status -s")
 
   items = {}
-  limit = 15
+  limit = 6
   for _, line in ipairs(status) do
     if limit == 0 then
       break
@@ -31,7 +31,7 @@ local git_status_items = function()
 
     table.insert(items, {
       {
-        section = "Git Status (limit 15)",
+        section = "Git Status (limit 6)",
         name = line,
         action = function()
           edit_file(modifier, file)
