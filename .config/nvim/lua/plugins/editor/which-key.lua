@@ -15,6 +15,7 @@ return {
     local groups = {
       f = { name = "Find" },
       s = { name = "Search" },
+      S = { name = "Split" },
       m = { name = "Linting and Formatting" },
       g = { name = "LSP/Git" },
       r = { name = "TODO's" },
