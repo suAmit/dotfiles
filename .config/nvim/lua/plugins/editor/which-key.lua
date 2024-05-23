@@ -14,16 +14,16 @@ return {
 
     local groups = {
       f = { name = "Find" },
-      s = { name = "Search" },
-      S = { name = "Split" },
-      m = { name = "Linting and Formatting" },
       g = { name = "LSP/Git" },
-      r = { name = "TODO's" },
-      w = { name = "Session" },
-      t = { name = "Tabs" },
-      x = { name = "Trouble" },
       h = { name = "gitsigns" },
       l = { name = "Terminal" },
+      m = { name = "Linting and Formatting" },
+      r = { name = "TODO's" },
+      s = { name = "Search" },
+      S = { name = "Split" },
+      t = { name = "Tabs" },
+      w = { name = "Session" },
+      x = { name = "Trouble" },
     }
 
     which_key.register(groups, opts)

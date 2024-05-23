@@ -14,7 +14,7 @@ keymap.set("v", "J", ":m '>+1<CR>gv=gv", { desc = "Selected line move Down" })
 keymap.set("n", "<leader>n", ":bnext<cr>", { desc = "Next buffer" })
 keymap.set("n", "<leader>p", ":bprevious<cr>", { desc = "Previous buffer" })
 keymap.set("n", "<leader>d", ":bdelete<cr>", { desc = "Delete buffer" })
-keymap.set("n", "bc", "<cmd>%bd | e#", { desc = "Close all buffer exccpet current buffer" })
+-- keymap.set("n", "<leader>x", "<cmd>%bd | e#<cr>", { desc = "Close all buffer exccpet current buffer" })
 
 -- clear search highlights
 keymap.set("n", "nh", ":nohl<CR>", { desc = "Clear search highlights" })
