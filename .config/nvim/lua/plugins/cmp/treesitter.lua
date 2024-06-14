@@ -2,9 +2,9 @@ return {
   "nvim-treesitter/nvim-treesitter",
   event = { "BufReadPre", "BufNewFile" },
   build = ":TSUpdate",
-  dependencies = {
-    "windwp/nvim-ts-autotag",
-  },
+  -- dependencies = {
+  --   "windwp/nvim-ts-autotag",
+  -- },
   config = function()
     -- import nvim-treesitter plugin
     local treesitter = require("nvim-treesitter.configs")
@@ -31,9 +31,9 @@ return {
         enable = true,
         disable = { "ocaml", "dart" },
       },
-      autotag = {
-        enable = true,
-      },
+      -- autotag = {
+      --   enable = true,
+      -- },
       -- ensure these language parsers are installed
       ensure_installed = {
         "json",

@@ -92,6 +92,11 @@ return {
           capabilities = capabilities,
         })
       end,
+      ["cssls"] = function()
+        lspconfig["cssls"].setup({
+          capabilities = capabilities,
+        })
+      end,
       -- ["lua_ls"] = function()
       --   -- configure lua server (with special settings)
       --   lspconfig["lua_ls"].setup({

@@ -9,9 +9,9 @@ return {
     -- set keymaps
     local keymap = vim.keymap -- for conciseness
 
-    vim.keymap.set("n", "m", substitute.operator, { desc = "Substitute with motion" })
-    vim.keymap.set("n", "mm", substitute.line, { desc = "Substitute line" })
-    vim.keymap.set("n", "M", substitute.eol, { desc = "Substitute to end of line" })
-    vim.keymap.set("x", "m", substitute.visual, { desc = "Substitute in visual mode" })
+    vim.keymap.set("n", "f", substitute.operator, { desc = "Substitute with motion" })
+    vim.keymap.set("n", "ff", substitute.line, { desc = "Substitute line" })
+    vim.keymap.set("n", "F", substitute.eol, { desc = "Substitute to end of line" })
+    vim.keymap.set("x", "f", substitute.visual, { desc = "Substitute in visual mode" })
   end,
 }
