@@ -12,6 +12,7 @@ return {
     local mason_lspconfig = require("mason-lspconfig")
 
     local mason_tool_installer = require("mason-tool-installer")
+    local lang_list = require("plugins.custom.lang")
 
     -- enable mason and configure icons
     mason.setup({
@@ -26,14 +27,12 @@ return {
 
     mason_lspconfig.setup({
       -- list of servers for mason to install
-      ensure_installed = { "tsserver", "html", "cssls" },
+      ensure_installed = lang_list.language.mason.LSP,
+
     })
 
     mason_tool_installer.setup({
-      ensure_installed = {
-        "prettier",
-        "eslint_d",
-      },
+      ensure_installed = lang_list.language.mason.mason_tool,      
     })
   end,
 }

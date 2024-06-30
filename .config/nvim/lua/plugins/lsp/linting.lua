@@ -3,14 +3,10 @@ return {
   event = { "BufReadPre", "BufNewFile" },
   config = function()
     local lint = require("lint")
+    local lang_list = require("plugins.custom.lang")
 
-    lint.linters_by_ft = {
-      javascript = { "eslint_d" },
-      typescript = { "eslint_d" },
-      javascriptreact = { "eslint_d" },
-      typescriptreact = { "eslint_d" },
-      svelte = { "eslint_d" },
-    }
+    lint.linters_by_ft = lang_list.language.lint
+    
 
     local lint_augroup = vim.api.nvim_create_augroup("lint", { clear = true })
 
