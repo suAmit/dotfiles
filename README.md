@@ -76,10 +76,11 @@ Install packages
 - `git`
 - `nodejs`
 - `clang`
+- `zsh`
   And package upgrade
 
 ```
-apk add neovim sudo git nodejs npm clang ; apk upgrade && apk update
+apk add neovim sudo git nodejs npm clang zsh; apk upgrade && apk update
 ```
 
 **One Block Copy/Paste**
@@ -214,3 +215,7 @@ Click on New SSH key buttom
 Paste SSH in textbox
 
 And Github login process complete
+
+### Change default shell
+
+[Guide](https://askubuntu.com/questions/131823/how-to-make-zsh-the-default-shell)
