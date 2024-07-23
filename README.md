@@ -215,7 +215,3 @@ Click on New SSH key buttom
 Paste SSH in textbox
 
 And Github login process complete
-
-### Change default shell
-
-[Guide](https://askubuntu.com/questions/131823/how-to-make-zsh-the-default-shell)
